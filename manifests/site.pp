@@ -58,6 +58,7 @@ node default {
   include hub
   include nginx
   include postgresql
+  include pgadmin3
   include java
   include chrome
   include firefox
