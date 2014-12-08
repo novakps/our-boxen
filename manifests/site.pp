@@ -63,6 +63,7 @@ node default {
   include firefox
   include hipchat
   include sourcetree
+  include calibre
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
