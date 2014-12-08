@@ -69,6 +69,10 @@ node default {
   include gimp
   include kindle
   include virtualbox
+  include reggy
+  include shiftit
+  include skitch
+  include skype
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
