@@ -93,7 +93,11 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
-      'gawk'
+      'gawk',
+      'p7zip',
+      'ant',
+      'wget',
+      'haproxy'
     ]:
   }
 
