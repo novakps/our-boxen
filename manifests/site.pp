@@ -60,6 +60,7 @@ node default {
   include postgresql
   include pgadmin3
   include java
+  include python
   include chrome
   include firefox
   include hipchat
