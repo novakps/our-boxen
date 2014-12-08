@@ -67,7 +67,6 @@ node default {
   include calibre
   include cord
   include gimp
-  include kindle
   include virtualbox
   include reggy
   include shiftit
