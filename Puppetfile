@@ -60,6 +60,7 @@ github "xquartz",     "1.2.1"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
+github "java",          "1.7.1"
 github "postgresql",    "3.0.0"
 github "sysctl",        "1.0.0"
 github "chrome",        "1.2.0"

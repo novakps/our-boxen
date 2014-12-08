@@ -58,6 +58,7 @@ node default {
   include hub
   include nginx
   include postgresql
+  include java
   include chrome
   include firefox
   include hipchat
