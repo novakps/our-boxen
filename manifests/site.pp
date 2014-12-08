@@ -67,6 +67,7 @@ node default {
   include cord
   include gimp
   include kindle
+  include virtualbox
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
