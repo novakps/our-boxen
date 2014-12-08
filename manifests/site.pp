@@ -59,6 +59,7 @@ node default {
   include nginx
   include postgresql
   include chrome
+  include firefox
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
