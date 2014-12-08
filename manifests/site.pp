@@ -64,6 +64,7 @@ node default {
   include hipchat
   include sourcetree
   include calibre
+  include cord
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
