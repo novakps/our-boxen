@@ -73,6 +73,7 @@ node default {
   include shiftit
   include skitch
   include skype
+  include graphviz
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
