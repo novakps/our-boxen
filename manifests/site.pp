@@ -74,6 +74,7 @@ node default {
   include skitch
   include skype
   include graphviz
+  include tmux
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {

@@ -79,3 +79,7 @@ github "shiftit",       "0.0.2"
 github "skitch",        "1.0.3"
 github "skype",         "1.1.0"
 github "graphviz",      "1.0.0"
+github "tmux",          "1.0.2"
+github "zsh",           "1.0.0"vak
+
+
