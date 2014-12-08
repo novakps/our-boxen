@@ -66,6 +66,7 @@ node default {
   include calibre
   include cord
   include gimp
+  include kindle
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
