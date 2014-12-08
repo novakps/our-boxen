@@ -62,3 +62,4 @@ github "xquartz",     "1.2.1"
 
 github "postgresql",    "3.0.0"
 github "sysctl",        "1.0.0"
+github "chrome",        "1.2.0"
