@@ -9,7 +9,7 @@ class people::novakps {
   include osx::dock::position
 
   $home     = "/Users/${::boxen_user}"
-  $dotfiles = "dotfiles"
+  $dotfiles = "${home}/dotfiles"
 
   repository { $dotfiles:
     source  => 'novakps/dotfiles'
