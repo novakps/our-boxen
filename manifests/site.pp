@@ -57,7 +57,6 @@ node default {
   include git
   include hub
   include nginx
-  include postgresql
   include pgadmin3
   include java
   include chrome
@@ -101,6 +100,8 @@ node default {
       'haproxy'
     ]:
   }
+
+  postgresql::db { 'seurat': }	
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
