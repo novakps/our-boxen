@@ -12,7 +12,7 @@ class people::novakps {
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
 
   repository { $dotfiles_dir:
-    source => "${::github_user}/dotfiles"
+    source => "novakps/dotfiles"
   }
 
   file { "${home}/.zshrc":
