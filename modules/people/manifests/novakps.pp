@@ -12,6 +12,6 @@ class people::novakps {
   $dotfiles = "dotfiles"
 
   repository { $dotfiles:
-    source  => 'novakps/dotfiles',
+    source  => 'novakps/dotfiles'
   }
 }
