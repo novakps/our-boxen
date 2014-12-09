@@ -98,8 +98,7 @@ node default {
       'p7zip',
       'ant',
       'wget',
-      'haproxy',
-      'python'
+      'haproxy'
     ]:
   }
 
