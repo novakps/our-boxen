@@ -76,10 +76,10 @@ node default {
   include tmux
 
 
-  # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
-  }
+  #  fail if FDE is not enabled
+  # if $::root_encrypted == 'no' {
+  #   fail('Please enable full disk encryption and try again')
+  # }
 
   # node versions
   nodejs::version { 'v0.10': }
