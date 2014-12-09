@@ -12,12 +12,12 @@ class people::novakps {
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
 
   repository {
-    $dotfiles_dir: source => "${::github_user}/dotfiles"
+    $dotfiles_dir: source => "novakps/dotfiles"
   }
 
   file {
     "${home}/.zshrc": ensure => link,
     target => "${dotfiles_dir}/.zshrc",
-    require => repository[$dotfiles_dir]
+    require => Repository[$dotfiles_dir]
   }
 }
