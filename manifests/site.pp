@@ -75,7 +75,6 @@ node default {
   include graphviz
   include tmux
 
-  include osx::recovery_message { 'If this Mac is found, please call +1 212 295 5800': }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
