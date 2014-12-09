@@ -16,7 +16,7 @@ class people::novakps {
   }
 
   file {
-    "${home}/.zshrc": ensure = > link,
+    "${home}/.zshrc": ensure => link,
     target => "${dotfiles_dir}/.zshrc",
     require => repository[$dotfiles_dir]
   }
