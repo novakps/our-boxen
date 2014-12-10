@@ -57,23 +57,86 @@ node default {
   include git
   include hub
   include nginx
-  include pgadmin3
+
+  # languages
   include java
+
+  # browsers
   include chrome
   include firefox
+
+  # development tools
+  include virtualbox
+  # include intellij_customisations
+
+  # text editors
+  include emacs
+  include emacs_customisations
+  include prelude
+
+ # databases
+  include postgresql
+  postgresql::db { 'seurat': }
+#  package { 'pgadmin3': provider => 'brewcask'}
+
+  # command line
+  include terminal_customisations
+  include zsh
+  include zsh_customisations
+  include wget
+  include autojump
+  include ctags
+  include tmux
+
+  # applications
+  include evernote
+  include googledrive
   include hipchat
   include sourcetree
   include calibre
   include cord
   include gimp
-  include virtualbox
   include reggy
   include shiftit
   include skitch
   include skype
   include graphviz
-  include tmux
+  include vlc
 
+
+  # osx defaults
+  include osx::global::enable_keyboard_control_access
+  include osx::global::expand_print_dialog
+  include osx::global::expand_save_dialog
+  include osx::global::tap_to_click
+  include osx::global::enable_standard_function_keys
+  include osx::global::disable_remote_control_ir_receiver
+  include osx::global::key_repeat_rate
+  class { 'osx::global::key_repeat_delay': delay => 10 }
+
+  include osx::dock::autohide
+  include osx::dock::icon_size
+
+  include osx::finder::show_all_on_desktop
+  include osx::finder::empty_trash_securely
+  include osx::finder::unhide_library
+
+  include osx::disable_app_quarantine
+  include osx::no_network_dsstores
+  include osx::software_update
+  include osx::keyboard::capslock_to_control
+
+  class { 'osx::dock::hot_corners':
+    top_right => "Application Windows",
+    top_left => "Mission Control",
+    bottom_left => "Put Display to Sleep",
+    bottom_right => "Desktop",
+  }
+
+  # sudo defaults
+  sudo::defaults { 'Defaults':
+    parameters => ['timestamp_timeout=20'],
+  }
 
   #  fail if FDE is not enabled
   # if $::root_encrypted == 'no' {
@@ -96,12 +159,10 @@ node default {
       'gawk',
       'p7zip',
       'ant',
-      'wget',
       'haproxy'
     ]:
   }
 
-  postgresql::db { 'seurat': }	
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,

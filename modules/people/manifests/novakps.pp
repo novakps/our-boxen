@@ -4,8 +4,17 @@ class people::novakps {
   include ohmyzsh
   include zshgitprompt
   include osx::dock::clear_dock
-  include osx::dock::autohide
-  include osx::keyboard::capslock_to_control
   include osx::dock::position
 
+  git::config::global { 'user.email':
+    value  => 'paul.novak@schrodinger.com'
+  }
+
+  git::config::global { 'user.name':
+    value  => 'Paul Novak'
+  }
+
+  git::config::global { 'push.default':
+    value => 'current'
+  }
 }
