@@ -67,7 +67,14 @@ node default {
 
   # development tools
   include virtualbox
-  # include intellij_customisations
+
+  class { 'intellij':
+    edition => 'ultimate',
+    version => '12.1.7b'
+  }
+  class { 'intellij_customisations':
+    license => file("/Users/$::boxen_user/idea12.key")
+  }
 
   # text editors
   include emacs
